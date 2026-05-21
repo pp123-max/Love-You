@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>爱你</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff5f7;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  }
+  .heart-wrap {
+    position: relative;
+    width: 260px;
+    height: 240px;
+    animation: beat 1.4s ease-in-out infinite;
+  }
+  .heart-wrap svg {
+    width: 100%;
+    height: 100%;
+  }
+  .photo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -48%);
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 3px solid #fff;
+  }
+  @keyframes beat {
+    0%, 100% { transform: scale(1); }
+    30% { transform: scale(1.08); }
+    60% { transform: scale(0.96); }
+  }
+  .msg {
+    margin-top: 28px;
+    font-size: 22px;
+    color: #c0385a;
+    letter-spacing: 3px;
+    animation: fadein 1.8s ease forwards;
+  }
+  @keyframes fadein {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+  <div class="heart-wrap">
+    <svg viewBox="0 0 100 92" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50,82 C50,82 4,50 4,24 C4,9 15,1 27,1 C36,1 44,6 50,14 C56,6 64,1 73,1 C85,1 96,9 96,24 C96,50 50,82 50,82Z" fill="#e85b7a"/>
+    </svg>
+    <img class="photo" src="photo.jpg" alt="宝贝"/>
+  </div>
+  <p class="msg">宝贝，今年依旧爱你。</p>
+</body>
+</html>
